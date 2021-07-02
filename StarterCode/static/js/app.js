@@ -28,10 +28,31 @@ d3.json("samples.json").then(function(data) {
     console.log(currentId);
 
     // Horizontal Bar Chart
-    // create array of dictionaries for selected id
+    // Initialize array of dictionaries for selected id
     var samplesData = [];
-    var currentSample = data.samples.filter(d => d.id === currentId);
+    // Filter sample with selected id
+    var currentSample = data.samples.filter(d => d.id === currentId)[0];
     console.log(currentSample);
+
+    // Loop through samples data to create array of dictionaries
+    for (var i = 0; i < currentSample.otu_ids.length; i++) {
+      var otu = {};
+      otu.otuID = currentSample.otu_ids[i];
+      otu.otuLabel = currentSample.otu_labels[i];
+      otu.sampleValue = currentSample.sample_values[i];
+      samplesData.push(otu);
+    }
+    console.log(samplesData);
+
+    // Sort and split samples data to get top 10 otu
+    var topTen = samplesData.sort(function compareFunction(firstOtu, secondOtu) {
+      return secondOtu.sampleValue - firstOtu.sampleValue;
+    });
+
+    topTen = topTen.slice(0,10);
+    console.log(topTen)
+
+
 
     // Bubble Chart
 
