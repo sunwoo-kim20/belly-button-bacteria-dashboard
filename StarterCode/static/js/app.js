@@ -77,16 +77,25 @@ d3.json("samples.json").then(function(data) {
     // Bubble Chart
     //-------------------------------------------------
 
+    // Create trace and layout
     var traceBubble = {
       x : samplesData.map(otu => otu.otuID),
       y : samplesData.map(otu => otu.sampleValue),
       mode: "markers",
-      text: samplesData.map(otu => otu.otuLabel), 
+      text: samplesData.map(otu => otu.otuLabel),
       marker: {
         size: samplesData.map(otu => otu.sampleValue),
         color: samplesData.map(otu => otu.otuID)
       }
     };
+    var bubbleLayout = {
+      title: `Bacteria Cultures Per Sample for ID ${currentId}`,
+      xaxis: "OTU ID"
+    };
+
+    var bubbleData = [traceBubble];
+
+
 
     // Demographic info table
     //-------------------------------------------------
