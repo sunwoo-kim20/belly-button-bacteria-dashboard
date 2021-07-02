@@ -56,16 +56,17 @@ d3.json("samples.json").then(function(data) {
     // Create components to graph with plotly
     var trace1 = {
       x: topTen.map(otu => otu.sampleValue),
-      y: topTen.map(otu => otu.otuLabel),
+      y: topTen.map(otu => `OTU ${otu.otuID}`),
       type: "bar",
       orientation: "h",
-      text: ["sunwoo", "anah", "nat", "courtney"]
+      text: topTen.map(otu => otu.otuLabel)
     };
 
     var barData = [trace1];
 
     var layout = {
-      title: "Top 10 Bacteria Cultures Found"
+      title: "Top 10 Bacteria Cultures Found",
+      yaxis: {autorange: "reversed"}
     };
 
     Plotly.newPlot("bar", barData, layout);
