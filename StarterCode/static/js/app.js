@@ -28,6 +28,8 @@ d3.json("samples.json").then(function(data) {
     console.log(currentId);
 
     // Horizontal Bar Chart
+    //---------------------------------------------
+
     // Initialize array of dictionaries for selected id
     var samplesData = [];
     // Filter sample with selected id
@@ -54,7 +56,7 @@ d3.json("samples.json").then(function(data) {
     console.log(topTen[0].otuID);
 
     // Create components to graph with plotly
-    var trace1 = {
+    var traceBar = {
       x: topTen.map(otu => otu.sampleValue),
       y: topTen.map(otu => `OTU ${otu.otuID}`),
       type: "bar",
@@ -62,7 +64,7 @@ d3.json("samples.json").then(function(data) {
       text: topTen.map(otu => otu.otuLabel)
     };
 
-    var barData = [trace1];
+    var barData = [traceBar];
 
     var layout = {
       title: "Top 10 Bacteria Cultures Found",
@@ -73,8 +75,15 @@ d3.json("samples.json").then(function(data) {
 
 
     // Bubble Chart
+    //-------------------------------------------------
+
+    var traceBubble =
 
     // Demographic info table
+    //-------------------------------------------------
+
+    // Gauge Chart
+    //-------------------------------------------------
   }
 
 
