@@ -78,6 +78,7 @@ d3.json("samples.json").then(function(data) {
     //-------------------------------------------------
 
     // Create trace and layout
+    var bubbleScale = 15;
     var traceBubble = {
       x : samplesData.map(otu => otu.otuID),
       y : samplesData.map(otu => otu.sampleValue),
@@ -85,7 +86,8 @@ d3.json("samples.json").then(function(data) {
       text: samplesData.map(otu => otu.otuLabel),
       marker: {
         size: samplesData.map(otu => otu.sampleValue),
-        color: samplesData.map(otu => otu.otuID)
+        color: samplesData.map(otu => otu.otuID),
+        sizeref: 2.0 * Math.max(...samplesData.map(otu => otu.sampleValue)) / (bubbleScale**2),
       }
     };
     var bubbleLayout = {
