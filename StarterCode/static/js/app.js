@@ -98,12 +98,18 @@ d3.json("samples.json").then(function(data) {
     var bubbleData = [traceBubble];
 
     // Create bubble chart
-
     Plotly.newPlot("bubble", bubbleData, bubbleLayout);
 
 
     // Demographic info table
     //-------------------------------------------------
+
+    // Obtain string for metadata
+    var metaDataString = "";
+    var selectedMetadata = data.metadata.filter(id => id.id === currentId);
+
+
+    var metadataDisplay = d3.select("#sample-metadata").text("hello");
 
     // Gauge Chart
     //-------------------------------------------------
