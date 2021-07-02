@@ -1,7 +1,7 @@
 // Use D3 to read data from json file
 d3.json("samples.json").then(function(data) {
   // console.log(data.samples.filter(d => d.id === "940"));
-  // console.log(data);
+  console.log(data);
 
   // Add ids to dropdown menu
   var dropDown = d3.select("#selDataset");
@@ -50,8 +50,25 @@ d3.json("samples.json").then(function(data) {
     });
 
     topTen = topTen.slice(0,10);
-    console.log(topTen)
+    console.log(topTen);
+    console.log(topTen[0].otuID);
 
+    // Create components to graph with plotly
+    var trace1 = {
+      x: topTen.map(otu => otu.sampleValue),
+      y: topTen.map(otu => otu.otuLabel),
+      type: "bar",
+      orientation: "h",
+      text: ["sunwoo", "anah", "nat", "courtney"]
+    };
+
+    var barData = [trace1];
+
+    var layout = {
+      title: "Top 10 Bacteria Cultures Found"
+    };
+
+    Plotly.newPlot("bar", barData, layout);
 
 
     // Bubble Chart
