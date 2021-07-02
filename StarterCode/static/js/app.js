@@ -90,11 +90,14 @@ d3.json("samples.json").then(function(data) {
     };
     var bubbleLayout = {
       title: `Bacteria Cultures Per Sample for ID ${currentId}`,
-      xaxis: "OTU ID"
+      xaxis: {title: "OTU ID"}
     };
 
     var bubbleData = [traceBubble];
 
+    // Create bubble chart
+
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout);
 
 
     // Demographic info table
