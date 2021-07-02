@@ -66,18 +66,27 @@ d3.json("samples.json").then(function(data) {
 
     var barData = [traceBar];
 
-    var layout = {
+    var barLayout = {
       title: "Top 10 Bacteria Cultures Found",
       yaxis: {autorange: "reversed"}
     };
 
-    Plotly.newPlot("bar", barData, layout);
+    Plotly.newPlot("bar", barData, barLayout);
 
 
     // Bubble Chart
     //-------------------------------------------------
 
-    var traceBubble =
+    var traceBubble = {
+      x : samplesData.map(otu => otu.otuID),
+      y : samplesData.map(otu => otu.sampleValue),
+      mode: "markers",
+      text: samplesData.map(otu => otu.otuLabel), 
+      marker: {
+        size: samplesData.map(otu => otu.sampleValue),
+        color: samplesData.map(otu => otu.otuID)
+      }
+    };
 
     // Demographic info table
     //-------------------------------------------------
