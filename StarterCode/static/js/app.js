@@ -104,19 +104,19 @@ d3.json("samples.json").then(function(data) {
     // Demographic info table
     //-------------------------------------------------
 
-    // Initialize string for metadata
-    var metadataString = "";
-
     // Filter to get metadata of selected id and get dictionary entries
     var selectedMetadata = data.metadata.filter(d => d.id === +currentId)[0];
     var metadataEntries = Object.entries(selectedMetadata);
     console.log(metadataEntries);
 
-    // Append each key value pair to our string
-
+    // Append each key value pair to our metadata display element
+    var metadataDisplay = d3.select("#sample-metadata");
     metadataEntries.forEach(([key, value]) => {
-      metadata += `${key} : ${value} <br>`;
+      metadataDisplay.append("p")
+        .attr("style", "font-weight : bold").text(`${key} : ${value}`);
     });
+
+
 
 
 
