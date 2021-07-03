@@ -113,19 +113,31 @@ d3.json("samples.json").then(function(data) {
     var metadataDisplay = d3.select("#sample-metadata");
     metadataEntries.forEach(([key, value]) => {
       metadataDisplay.append("p")
-        .attr("style", "font-weight : bold").text(`${key} : ${value}`);
+        .attr("style", "font-weight : bold").text(`${key.toUpperCase()} : ${value}`);
     });
-
-
-
-
-
-
-
-
 
     // Gauge Chart
     //-------------------------------------------------
+    var traceGauge = {
+      value: seelctedMetadata.wfreq,
+      title: {text : "Scrubs per Week"},
+      type: "indicator",
+      mode: "gauge",
+      gauge: {
+        axis: {range: [null, 9]},
+        steps: [
+          {range: [0,1], color : "lightgray"}
+        ]
+      }
+
+
+    };
+
+    var gaugeLayout = {
+      title: "Belly Button Washing Frequency"
+    }
+    Plotly.newPlot("gauge", gaugeData, gaugeLayout);
+
   }
 
 
