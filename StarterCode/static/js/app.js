@@ -124,10 +124,18 @@ d3.json("samples.json").then(function(data) {
       type: "indicator",
       mode: "gauge",
       gauge: {
-        bar: {line: {color: "green"}},
-        axis: {range: [null, 9], tickmode: "auto", nticks: 9},
+        bar: {color: "purple"},
+        axis: {range: [0, 9], dtick: 1},
         steps: [
-          {range: [0,1], color : "lightgray"}
+          {range: [0,1], color : "rgb(255,255,255)"},
+          {range: [1,2], color : "rgb(228,246,238)"},
+          {range: [2,3], color : "rgb(147,186,169)"},
+          {range: [3,4], color : "rgb(125,168,149)"},
+          {range: [4,5], color : "rgb(111,154,135)"},
+          {range: [5,6], color : "rgb(90,135,116)"},
+          {range: [6,7], color : "rgb(71,122,100)"},
+          {range: [7,8], color : "rgb(53,101,80)"},
+          {range: [8,9], color : "rgb(32,73,55)"}
         ]
       }
 
@@ -137,7 +145,7 @@ d3.json("samples.json").then(function(data) {
     var gaugeData = [traceGauge];
     var gaugeLayout = {
       title: "Belly Button Washing Frequency"
-    }
+    };
     Plotly.newPlot("gauge", gaugeData, gaugeLayout);
 
   }
