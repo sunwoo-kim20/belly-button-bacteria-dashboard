@@ -119,12 +119,13 @@ d3.json("samples.json").then(function(data) {
     // Gauge Chart
     //-------------------------------------------------
     var traceGauge = {
-      value: seelctedMetadata.wfreq,
+      value: selectedMetadata.wfreq,
       title: {text : "Scrubs per Week"},
       type: "indicator",
       mode: "gauge",
       gauge: {
-        axis: {range: [null, 9]},
+        bar: {line: {color: "green"}},
+        axis: {range: [null, 9], tickmode: "auto", nticks: 9},
         steps: [
           {range: [0,1], color : "lightgray"}
         ]
@@ -133,6 +134,7 @@ d3.json("samples.json").then(function(data) {
 
     };
 
+    var gaugeData = [traceGauge];
     var gaugeLayout = {
       title: "Belly Button Washing Frequency"
     }
