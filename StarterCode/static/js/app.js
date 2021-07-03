@@ -104,12 +104,25 @@ d3.json("samples.json").then(function(data) {
     // Demographic info table
     //-------------------------------------------------
 
-    // Obtain string for metadata
-    var metaDataString = "";
-    var selectedMetadata = data.metadata.filter(id => id.id === currentId);
+    // Initialize string for metadata
+    var metadataString = "";
+
+    // Filter to get metadata of selected id and get dictionary entries
+    var selectedMetadata = data.metadata.filter(d => d.id === +currentId)[0];
+    var metadataEntries = Object.entries(selectedMetadata);
+    console.log(metadataEntries);
+
+    // Append each key value pair to our string
+
+    metadataEntries.forEach(([key, value]) => {
+      metadata += `${key} : ${value} <br>`;
+    });
 
 
-    var metadataDisplay = d3.select("#sample-metadata").text("hello");
+
+
+
+
 
     // Gauge Chart
     //-------------------------------------------------
