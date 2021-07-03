@@ -125,7 +125,15 @@ d3.json("samples.json").then(function(data) {
       mode: "gauge",
       gauge: {
         bar: {color: "purple"},
-        axis: {range: [0, 9], dtick: 1},
+        axis: {
+          range: [0, 9],
+          dtick: 1
+        },
+        threshold: {
+          line: {color: "red", width: 6},
+          thickness: 0.75,
+          value: selectedMetadata.wfreq
+        },
         steps: [
           {range: [0,1], color : "rgb(255,255,255)"},
           {range: [1,2], color : "rgb(228,246,238)"},
