@@ -1,5 +1,5 @@
 // Use D3 to read data from json file
-d3.json("samples.json").then(function(data) {
+d3.json("data/samples.json").then(function(data) {
   // console.log(data.samples.filter(d => d.id === "940"));
   console.log(data);
 
