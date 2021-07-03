@@ -109,8 +109,10 @@ d3.json("samples.json").then(function(data) {
     var metadataEntries = Object.entries(selectedMetadata);
     console.log(metadataEntries);
 
-    // Append each key value pair to our metadata display element
+    // Get metadata html element and clear previous output
     var metadataDisplay = d3.select("#sample-metadata");
+    metadataDisplay.html("");
+    // Append each key value pair to our metadata display element
     metadataEntries.forEach(([key, value]) => {
       metadataDisplay.append("p")
         .attr("style", "font-weight : bold").text(`${key.toUpperCase()} : ${value}`);
