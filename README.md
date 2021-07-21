@@ -59,13 +59,21 @@ To get a local copy up and running follow these simple steps.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-## Dashboard Visualizations for Two Separate Test Subject ID's
+## Example Dashboard Visualizations for Test Subject ID 941
 
 ### Subject ID Dropdown Selection, Demographic Table, and Bar Chart
-![ID Selection, Demographic Table, and Bar Chart](https://github.com/sunwoo-kim20/belly-button-bacteria-dashboard/blob/main/docs/images/michelin-db-screenshot.png?raw=true)
+![ID Selection, Demographic Table, and Bar Chart](https://github.com/sunwoo-kim20/belly-button-bacteria-dashboard/blob/main/docs/images/demographic-barchart-screenshot.png?raw=true)
 
-Data includes nearest hotel to the restaurant and the restaurant's specialty dishes.
-![Screenshot of calling data through pymongo](https://github.com/sunwoo-kim20/etl-michelin-restaurants/blob/main/docs/images/document-calls.png?raw=true)
+### Gauge Chart
+![Gauge Chart](https://github.com/sunwoo-kim20/belly-button-bacteria-dashboard/blob/main/docs/images/gauge-chart-screenshot.png?raw=true)
+
+
+### Bubble Chart
+![Gauge Chart](https://github.com/sunwoo-kim20/belly-button-bacteria-dashboard/blob/main/docs/images/bubblechart-screenshot.png?raw=true)
+
+### Example Full Dashboard for Test Subhect ID 1601
+![Gauge Chart](https://github.com/sunwoo-kim20/belly-button-bacteria-dashboard/blob/main/docs/images/dashboard-example-id1601.png?raw=true)
+
 
 
 
