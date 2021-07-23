@@ -42,6 +42,7 @@ The Belly Button Biodiversity Dashboard is an interactive dashboard application,
 * D3
 * Plotly
 * HTML/CSS
+* Bootstrap
 * Github Pages
 
 <!-- GETTING STARTED -->
