@@ -33,7 +33,7 @@ Link to dashboard on Github Pages: [Belly Button Biodiversity Interactive Dashbo
 ## About The Project
 
 ## Project Description
-The Belly Button Biodiversity Dashboard is an interactive dashboard application, hosted on Github pages, that allows the user to explore the belly button biodiversity dataset through a table and various charts. For each test subject, this includes a horizontal barchart on the top 10 bacteria cultures found, a gauge chart indicating navel wash frequency, and a bubble chart visualizing each bacteria culture by ID, name, and amount of bacteria present per sample. 
+The Belly Button Biodiversity Dashboard is an interactive dashboard application, hosted on Github pages, that allows the user to select a test subject ID and explore the belly button biodiversity dataset through a table and various charts. For each test subject, this includes a horizontal barchart on the top 10 bacteria cultures found, a gauge chart indicating navel wash frequency, and a bubble chart visualizing each bacteria culture by ID, name, and amount of bacteria present per sample. 
 
 ### Built With
 
