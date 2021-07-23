@@ -33,7 +33,7 @@ created by Sunny Kim
 ## About The Project
 
 ## Project Description
-The Belly Button Biodiversity Dashboard is an interactive dashboard application 
+The Belly Button Biodiversity Dashboard is an interactive dashboard application, hosted on Github pages, that allows the user to explore the belly button biodiversity dataset through a table and various charts. For each test subject, this includes a horizontal barchart on the top 10 bacteria cultures found, a gauge chart indicating navel wash frequency, and a bubble chart visualizing each bacteria culture by ID, name, and amount of bacteria present per sample. 
 
 ### Built With
 
@@ -52,9 +52,13 @@ To get a local copy up and running follow these simple steps.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/sunwoo-kim20/etl-michelin-restaurants.git
+   git clone https://github.com/sunwoo-kim20/belly-button-bacteria-dashboard.git
    ```
-
+2. Run local server from terminal to host the page at localhost:8000 in your web browser.
+   ```sh
+   python -m http.server
+   ```
+Alternatively, use this [link](https://sunwoo-kim20.github.io/belly-button-bacteria-dashboard/) to access dashboard webpage.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -82,6 +86,6 @@ To get a local copy up and running follow these simple steps.
 
 Sunny Kim - s.kim32415@gmail.com
 
-Project Link: [https://github.com/sunwoo-kim20/sqlalchemy-challenge](https://github.com/sunwoo-kim20/sqlalchemy-challenge)
+Project Link: [https://github.com/sunwoo-kim20/belly-button-bacteria-dashboard](https://github.com/sunwoo-kim20/belly-button-bacteria-dashboard)
 
 
