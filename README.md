@@ -1,5 +1,6 @@
 # Belly Button Bacteria Biodiversity
 Interactive dashboard that explores the Belly Button Biodiversity dataset.
+
 created by Sunny Kim
 
 Link to dashboard on Github Pages: [Belly Button Biodiversity Interactive Dashboard](https://sunwoo-kim20.github.io/belly-button-bacteria-dashboard/)
